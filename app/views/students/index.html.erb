@@ -1,0 +1,7 @@
+<% if @students.any? %>
+<div class="ui divided list">
+  <%= render collection: @students, partial: 'student' %>
+</div>
+<% else %>
+  <%= content_tag :h2, 'No students registered yet...', class: 'ui header' %>
+<% end %>

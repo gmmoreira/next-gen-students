@@ -1,0 +1,17 @@
+<%= form_for(@student, class: 'ui form') do |f| %>
+  <div class="field">
+    <%= f.label(:first_name, class: 'ui label') %>
+    <%= f.text_field(:first_name, class: 'ui input', required: true) %>
+  </div>
+  <div class="field">
+    <%= f.label(:last_name, class: 'ui label') %>
+    <%= f.text_field(:last_name, class: 'ui input', required: true) %>
+  </div>
+  <div class="field">
+    <%= f.label(:email, class: 'ui label') %>
+    <%= f.text_field(:email, type: :email, class: 'ui input', required: true) %>
+  </div>
+
+  <%= button_tag('Save', type: :submit, class: 'ui primary button') %>
+  <%= link_to('Cancel', :back, class: 'ui button') %>
+<% end %>

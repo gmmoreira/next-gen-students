@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NextGenStudents</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application' %>
+    <%= content_for(:stylesheet) %>
+  </head>
+
+  <body>
+    <div class="main ui container">
+      <%= content_tag(:h1, content_for(:title) || "Students", class: 'ui huge header') %>
+
+      <%= semantic_flash %>
+
+      <%= yield %>
+    </div>
+
+    <%= javascript_include_tag 'application' %>
+    <%= content_for(:javascript) %>
+  </body>
+</html>
